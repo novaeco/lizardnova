@@ -4,7 +4,7 @@ CFLAGS = -I.. -I../components -I../components/core/animals -I../components/stora
          -I/usr/include/cjson
 LDLIBS = -lcjson
 
-TESTS = test_animals test_storage test_logging test_ui
+TESTS = test_animals test_storage test_logging test_ui test_animals_load
 
 COMMON_SRCS = ../components/core/animals/animals.c \
               ../components/storage/storage.c \

@@ -8,3 +8,7 @@ dependencies:
   utils: "*"
   lcd_st7262: "*"
   touch_gt911: "*"
+  monitor: "*"
+  autoconfig: "*"
+  diagnostic: "*"
+  assistant: "*"

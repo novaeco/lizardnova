@@ -92,6 +92,8 @@ bool animals_load_from_json(void)
         }
 
         cJSON *name = cJSON_GetObjectItem(item, "name");
+        cJSON *species = cJSON_GetObjectItem(item, "species");
+        cJSON *habitat = cJSON_GetObjectItem(item, "habitat");
         cJSON *age = cJSON_GetObjectItem(item, "age");
         if (!cJSON_IsString(name)) {
             continue;
@@ -100,6 +102,12 @@ bool animals_load_from_json(void)
         animal_t a;
         memset(&a, 0, sizeof(a));
         strncpy(a.name, name->valuestring, sizeof(a.name) - 1);
+        if (cJSON_IsString(species)) {
+            strncpy(a.species, species->valuestring, sizeof(a.species) - 1);
+        }
+        if (cJSON_IsString(habitat)) {
+            strncpy(a.habitat, habitat->valuestring, sizeof(a.habitat) - 1);
+        }
         if (cJSON_IsNumber(age)) {
             a.age = age->valueint;
         }

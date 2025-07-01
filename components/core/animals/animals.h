@@ -6,6 +6,8 @@
 // Simple in-memory representation of an animal
 typedef struct {
     char name[32];
+    char species[32];
+    char habitat[32];
     int age;
 } animal_t;
 

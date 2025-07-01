@@ -9,9 +9,17 @@
 int main(void)
 {
     animals_init();
-    animal_t a = {"Gecko", 2};
+    animal_t a = {0};
+    strcpy(a.name, "Gecko");
+    strcpy(a.species, "Gekkonidae");
+    strcpy(a.habitat, "Desert");
+    a.age = 2;
     animals_create(&a);
-    animal_t b = {"Snake", 4};
+    animal_t b = {0};
+    strcpy(b.name, "Snake");
+    strcpy(b.species, "Colubridae");
+    strcpy(b.habitat, "Forest");
+    b.age = 4;
     animals_create(&b);
 
     lv_obj_t *screen = ui_animals_create();

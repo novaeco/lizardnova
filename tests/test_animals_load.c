@@ -16,7 +16,9 @@ int main(void)
     snprintf(json_path, sizeof(json_path), "%s/animals.json", tmpdir);
     FILE *f = fopen(json_path, "w");
     assert(f);
-    fputs("[{\"name\":\"Tim\",\"age\":5},{\"name\":\"Lily\",\"age\":2}]", f);
+    fputs("[{\"name\":\"Tim\",\"age\":5,\"species\":\"Salamander\",\"habitat\":\"Wetland\"},"
+          "{\"name\":\"Lily\",\"age\":2,\"species\":\"Axolotl\",\"habitat\":\"Aquarium\"}]",
+          f);
     fclose(f);
 
     setenv("STORAGE_BASE_PATH", tmpdir, 1);
@@ -27,10 +29,16 @@ int main(void)
     assert(animals_get_count() == 2);
 
     const animal_t *a = animals_get(0);
-    assert(a && strcmp(a->name, "Tim") == 0 && a->age == 5);
+    assert(a && strcmp(a->name, "Tim") == 0);
+    assert(strcmp(a->species, "Salamander") == 0);
+    assert(strcmp(a->habitat, "Wetland") == 0);
+    assert(a->age == 5);
 
     a = animals_get(1);
-    assert(a && strcmp(a->name, "Lily") == 0 && a->age == 2);
+    assert(a && strcmp(a->name, "Lily") == 0);
+    assert(strcmp(a->species, "Axolotl") == 0);
+    assert(strcmp(a->habitat, "Aquarium") == 0);
+    assert(a->age == 2);
 
     unlink(json_path);
     rmdir(tmpdir);

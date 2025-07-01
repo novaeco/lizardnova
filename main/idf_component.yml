@@ -1,0 +1,10 @@
+version: "0.1.0"
+description: "Main application"
+dependencies:
+  idf: ">=5.0"
+  animals: "*"
+  storage: "*"
+  ui: "*"
+  utils: "*"
+  lcd_st7262: "*"
+  touch_gt911: "*"

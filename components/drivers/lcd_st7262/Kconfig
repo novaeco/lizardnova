@@ -1,0 +1,23 @@
+menu "ST7262 LCD"
+
+config LCD_ST7262_MOSI
+    int "MOSI GPIO"
+    default 23
+
+config LCD_ST7262_SCLK
+    int "SCLK GPIO"
+    default 18
+
+config LCD_ST7262_CS
+    int "CS GPIO"
+    default 5
+
+config LCD_ST7262_DC
+    int "D/C GPIO"
+    default 21
+
+config LCD_ST7262_RST
+    int "Reset GPIO"
+    default 22
+
+endmenu

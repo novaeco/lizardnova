@@ -6,12 +6,19 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+#ifndef CONFIG_TOUCH_GT911_SDA
+#define CONFIG_TOUCH_GT911_SDA 21
+#endif
+#ifndef CONFIG_TOUCH_GT911_SCL
+#define CONFIG_TOUCH_GT911_SCL 22
+#endif
+
 // Default I2C address for the controller
 #define GT911_ADDR 0x5D
 
 static i2c_port_t s_port = I2C_NUM_0;
-static gpio_num_t s_sda = GPIO_NUM_21;
-static gpio_num_t s_scl = GPIO_NUM_22;
+static gpio_num_t s_sda = CONFIG_TOUCH_GT911_SDA;
+static gpio_num_t s_scl = CONFIG_TOUCH_GT911_SCL;
 static uint8_t s_addr = GT911_ADDR;
 static uint8_t s_rotation = 0;
 

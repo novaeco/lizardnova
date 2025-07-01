@@ -3,4 +3,5 @@ description: "Animal data management"
 dependencies:
   idf: ">=5.0"
   storage: "*"
-  cJSON: "*"
+  idf_components:
+    cJSON: "*"

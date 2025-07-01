@@ -2,5 +2,7 @@ version: "0.1.0"
 description: "ST7262 LCD driver"
 dependencies:
   idf: ">=5.0"
+  idf_components:
+    driver: "*"
   lvgl: "*"
   utils: "*"

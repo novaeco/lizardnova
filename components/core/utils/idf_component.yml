@@ -2,5 +2,4 @@ version: "0.1.0"
 description: "Utility helpers"
 dependencies:
   idf: ">=5.0"
-  idf_components:
-    log: "*"
+  log: "*"

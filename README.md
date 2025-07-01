@@ -9,6 +9,7 @@ controller drivers. Data about the animals is expected in JSON format and can be
 stored on the device for display.
 
 Additional documentation can be found in the [docs](docs/) directory.
+An overview of the built-in agents is provided in [docs/agents.md](docs/agents.md).
 
 ## Hardware requirements
 - ESP32 development board

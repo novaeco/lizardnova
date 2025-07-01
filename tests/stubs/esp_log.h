@@ -3,6 +3,8 @@
 
 #define ESP_LOG_INFO 0
 #define ESP_LOG_ERROR 1
+#define ESP_LOG_WARN 2
+#define ESP_LOG_DEBUG 3
 
 typedef int esp_log_level_t;
 

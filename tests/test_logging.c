@@ -12,6 +12,12 @@ int main(void)
     log_error("TEST", "str %s %d", "hi", 3);
     assert(strcmp(esp_log_last_buf, "str hi 3") == 0);
 
+    LOG_WARN("TEST", "warn %d", 7);
+    assert(strcmp(esp_log_last_buf, "warn 7") == 0);
+
+    LOG_DEBUG("TEST", "dbg %s", "ok");
+    assert(strcmp(esp_log_last_buf, "dbg ok") == 0);
+
     printf("test_logging: all tests passed\n");
     return 0;
 }

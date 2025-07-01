@@ -1,18 +1,28 @@
-# Build output directories
+# ESP-IDF build output
 build/
-
-# Test build artifacts
-# Ignore object files generated in tests
-tests/*.o
-
-# Ignore test binaries while keeping source files
-tests/test_*
-!tests/test_*.c
-
-# CMake artifacts
+cmake-build-*/
 CMakeCache.txt
 CMakeFiles/
-cmake-build-*/
 
-# Misc
+# Compiled objects and binaries
+*.o
+*.elf
+*.bin
+*.map
+
+# sdkconfig and other generated config files
+sdkconfig
+sdkconfig.old
+project_description.json
+
+# Python artifacts
+*.pyc
+__pycache__/
+
+# Test build artifacts
+tests/test_*
+!tests/test_*.c
+tests/*.o
+
+# Misc logs
 *.log

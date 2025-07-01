@@ -3,6 +3,6 @@ description: "GT911 touch driver"
 dependencies:
   idf: ">=5.0"
   idf_components:
-    - driver
+    driver: "*"
   utils: "*"
   lvgl: "*"

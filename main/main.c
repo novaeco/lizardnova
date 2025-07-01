@@ -4,6 +4,10 @@
 #include "storage/storage.h"
 #include "drivers/lcd_st7262/lcd_st7262.h"
 #include "drivers/touch_gt911/gt911.h"
+#include "agents/autoconfig/autoconfig.h"
+#include "agents/diagnostic/diagnostic.h"
+#include "agents/monitor/monitor.h"
+#include "agents/assistant/assistant.h"
 #include "lvgl.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -19,14 +23,20 @@ void app_main(void)
     log_info("MAIN", "initialising storage");
     storage_init();
 
+    autoconfig_verify();
+
     log_info("MAIN", "loading animal data");
     animals_load_from_json();
+
+    monitor_init();
 
     log_info("MAIN", "initialising display");
     lcd_st7262_init();
 
     log_info("MAIN", "initialising touch");
     gt911_init();
+
+    diagnostic_run();
 
     log_info("MAIN", "registering input device");
     lv_indev_t *indev = lv_indev_create();
@@ -37,9 +47,12 @@ void app_main(void)
     lv_obj_t *screen = ui_animals_create();
     lv_scr_load(screen);
 
+    assistant_show_help();
+
     log_info("MAIN", "initialisation complete");
     while (1) {
         lv_timer_handler();
+        monitor_poll();
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }

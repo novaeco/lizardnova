@@ -1,7 +1,8 @@
 version: "0.1.0"
 description: "GT911 touch driver"
 dependencies:
-  idf: ">=5.0"
-  driver: "*"
+  idf:
+    version: ">=5.0"
+    components: [driver]
   utils: "*"
   lvgl: "*"

@@ -117,3 +117,12 @@ void gt911_read(lv_indev_t *indev, lv_indev_data_t *data)
     }
 }
 
+bool gt911_self_test(void)
+{
+    lv_indev_t indev = {0};
+    lv_indev_data_t data = {0};
+    gt911_read(&indev, &data);
+    (void)indev;
+    return true;
+}
+

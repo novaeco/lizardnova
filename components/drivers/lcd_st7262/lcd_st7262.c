@@ -128,3 +128,16 @@ void lcd_st7262_init(void)
     log_info("ST7262", "display initialised");
 }
 
+bool lcd_st7262_self_test(void)
+{
+    if (!s_disp) {
+        log_error("ST7262", "not initialised");
+        return false;
+    }
+
+    lv_area_t area = {0,0,0,0};
+    lv_color_t px = 0;
+    st7262_flush(s_disp, &area, (uint8_t *)&px);
+    return true;
+}
+

@@ -15,7 +15,11 @@
 // submenu.
 
 #include "lvgl.h"
+#include <stdbool.h>
 
 // Initialize the ST7262 display and register it with LVGL.
 void lcd_st7262_init(void);
+
+// Perform a basic flush test. Returns true on success.
+bool lcd_st7262_self_test(void);
 

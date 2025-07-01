@@ -1,1 +1,2 @@
 source "components/drivers/lcd_st7262/Kconfig"
+source "components/drivers/touch_gt911/Kconfig"

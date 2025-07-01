@@ -1,6 +1,6 @@
 version: "0.1.0"
 description: "Utility helpers"
 dependencies:
-  idf:
-    version: ">=5.0"
-    components: [log]
+  idf: ">=5.0"
+  idf_components:
+    - log

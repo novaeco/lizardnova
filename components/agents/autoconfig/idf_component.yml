@@ -4,3 +4,5 @@ dependencies:
   idf: ">=5.0"
   utils: "*"
   storage: "*"
+  idf_components:
+    cJSON: "*"

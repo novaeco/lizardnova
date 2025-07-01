@@ -2,11 +2,12 @@ CC ?= gcc
 CFLAGS = -I.. -I../components -I../components/core/animals -I../components/storage \
          -I../components/core/utils -I../components/core/ui -I../components/agents/monitor \
         -I../components/agents/autoconfig -I../components/agents/diagnostic \
-        -I../components/agents/assistant -I../components/lvgl -Istubs \
+        -I../components/agents/assistant -I../components/lvgl -Istubs -Istubs/driver \
          -I/usr/include/cjson
 LDLIBS = -lcjson
 
-TESTS = test_animals test_storage test_logging test_ui test_animals_load test_agents
+TESTS = test_animals test_storage test_logging test_ui test_animals_load \
+        test_agents test_autoconfig test_diagnostic
 
 COMMON_SRCS = ../components/core/animals/animals.c \
               ../components/storage/storage.c \
@@ -17,7 +18,9 @@ COMMON_SRCS = ../components/core/animals/animals.c \
               ../components/agents/diagnostic/diagnostic.c \
              ../components/agents/assistant/assistant.c \
              ../components/lvgl/lvgl.c \
-             stubs/esp_log.c
+             stubs/esp_log.c \
+             stubs/lcd_st7262_stub.c \
+             stubs/gt911_stub.c
 
 all: $(TESTS)
 

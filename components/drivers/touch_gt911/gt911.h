@@ -5,6 +5,7 @@
 #include "lvgl.h"
 #include "driver/i2c.h"
 #include "driver/gpio.h"
+#include <stdbool.h>
 
 // Configure the I2C port used by the driver
 void gt911_set_i2c_port(i2c_port_t port);
@@ -23,4 +24,7 @@ void gt911_init(void);
 
 // LVGL input device read callback
 void gt911_read(lv_indev_t *indev, lv_indev_data_t *data);
+
+// Basic communication test. Returns true on success.
+bool gt911_self_test(void);
 

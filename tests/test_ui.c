@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Include stubs
-#include "stubs/lvgl.h"
+#include "lvgl.h"
 
 int main(void)
 {

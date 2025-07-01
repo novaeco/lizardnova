@@ -1,0 +1,2 @@
+add_subdirectory(lcd_st7262)
+add_subdirectory(touch_gt911)

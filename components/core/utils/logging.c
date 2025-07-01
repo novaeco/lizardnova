@@ -19,3 +19,19 @@ void log_error(const char *tag, const char *fmt, ...)
     va_end(args);
 }
 
+void log_warn(const char *tag, const char *fmt, ...)
+{
+    va_list args;
+    va_start(args, fmt);
+    esp_log_writev(ESP_LOG_WARN, tag, fmt, args);
+    va_end(args);
+}
+
+void log_debug(const char *tag, const char *fmt, ...)
+{
+    va_list args;
+    va_start(args, fmt);
+    esp_log_writev(ESP_LOG_DEBUG, tag, fmt, args);
+    va_end(args);
+}
+

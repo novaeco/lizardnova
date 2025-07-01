@@ -15,6 +15,10 @@ int main(void)
     monitor_poll();
     assert(strstr(esp_log_last_buf, "humidity") != NULL);
 
+    monitor_set_thresholds(20, 40);
+    monitor_poll();
+    assert(strstr(esp_log_last_buf, "threshold exceeded") != NULL);
+
     autoconfig_verify();
     assert(strstr(esp_log_last_buf, "config") != NULL);
 

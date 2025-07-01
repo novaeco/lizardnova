@@ -1,0 +1,11 @@
+menu "Monitor"
+
+config MONITOR_TEMP_THRESHOLD
+    int "Temperature threshold"
+    default 30
+
+config MONITOR_HUM_THRESHOLD
+    int "Humidity threshold"
+    default 80
+
+endmenu

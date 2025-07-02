@@ -1,6 +1,6 @@
+name: lizardnova/diagnostic
 version: "0.1.0"
 description: "Diagnostics agent"
 dependencies:
   idf: ">=5.0"
-  utils:
-    path: ../../core/utils
+  lizardnova/utils: "*"

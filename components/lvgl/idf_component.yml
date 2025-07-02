@@ -1,3 +1,4 @@
+name: lizardnova/lvgl
 version: "0.1.0"
 description: "Minimal LVGL stub"
 dependencies:

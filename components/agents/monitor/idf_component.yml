@@ -1,6 +1,6 @@
+name: lizardnova/monitor
 version: "0.1.0"
 description: "Monitoring agent"
 dependencies:
   idf: ">=5.0"
-  utils:
-    path: ../../core/utils
+  lizardnova/utils: "*"

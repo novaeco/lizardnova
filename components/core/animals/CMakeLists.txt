@@ -1,5 +1,5 @@
 idf_component_register(
     SRCS "animals.c"
     INCLUDE_DIRS "."
-    REQUIRES storage utils json
+    REQUIRES storage utils cjson
 )

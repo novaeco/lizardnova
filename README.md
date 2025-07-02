@@ -1,6 +1,6 @@
 # ESP32 Reptile Dashboard
 
-[![CI](https://github.com/novaeco/lizardnova/actions/workflows/ci.yml/badge.svg)](https://github.com/novaeco/lizardnova/actions/workflows/ci.yml)
+[![CI](https://github.com/openai/lizardnova/actions/workflows/ci.yml/badge.svg)](https://github.com/openai/lizardnova/actions/workflows/ci.yml)
 
 ## Overview
 The project provides a skeleton for a reptile monitoring dashboard running on an ESP32.

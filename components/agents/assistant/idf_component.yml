@@ -1,6 +1,6 @@
-name: lizardnova/assistant
+name: espressif/assistant
 version: "0.1.0"
 description: "Assistant agent"
 dependencies:
   idf: ">=5.0"
-  lizardnova/utils: "*"
+  espressif/utils: "*"

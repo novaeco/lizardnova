@@ -1,6 +1,6 @@
-name: lizardnova/diagnostic
+name: espressif/diagnostic
 version: "0.1.0"
 description: "Diagnostics agent"
 dependencies:
   idf: ">=5.0"
-  lizardnova/utils: "*"
+  espressif/utils: "*"

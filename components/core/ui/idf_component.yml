@@ -2,5 +2,7 @@ version: "0.1.0"
 description: "UI helpers for animals"
 dependencies:
   idf: ">=5.0"
-  animals: "*"
-  lvgl: "*"
+  animals:
+    path: ../animals
+  lvgl:
+    path: ../../lvgl

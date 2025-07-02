@@ -39,7 +39,25 @@ An overview of the built-in agents is provided in [docs/agents.md](docs/agents.m
 5. Place any JSON data (e.g. `data/animals.json`) onto the target storage if required.
 
 ## Running unit tests
-Host-based unit tests live in `tests/`. They link against the system `cjson` library, so ensure the `libcjson-dev` package is installed (e.g. with `sudo apt-get install libcjson-dev` on Debian-based systems) before running `make`. Continuous integration executes the same steps as defined in `.github/workflows/ci.yml`. See [docs/testing_ci.md](docs/testing_ci.md) for details.
+Host-based unit tests live in `tests/` and link against the system `cjson` library. Install the development package before building the tests:
+
+```bash
+sudo apt-get install libcjson-dev
+```
+
+After installing the dependency, build and run the tests from the `tests/` directory:
+
+```bash
+cd tests
+make            # builds all test binaries
+./test_animals
+./test_animals_load
+./test_logging
+./test_storage
+./test_ui
+```
+
+Continuous integration executes the same steps as defined in `.github/workflows/ci.yml`. See [docs/testing_ci.md](docs/testing_ci.md) for details.
 
 ## Sample data file
 

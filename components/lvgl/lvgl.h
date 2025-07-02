@@ -55,6 +55,12 @@ struct lv_indev_s {
 };
 
 /* Constants */
+#ifndef LV_HOR_RES_MAX
+#define LV_HOR_RES_MAX 800
+#endif
+#ifndef LV_VER_RES_MAX
+#define LV_VER_RES_MAX 480
+#endif
 #define LV_INDEV_TYPE_POINTER 1
 #define LV_INDEV_STATE_REL 0
 #define LV_INDEV_STATE_PR 1

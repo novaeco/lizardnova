@@ -1,9 +1,6 @@
 # Running Unit Tests and CI
 
-The host based tests reside in the `tests/` directory. They can be built with
-`make` and run directly on a regular Linux system. The makefile links against
-the system `cjson` library, so you need the development package installed
-before invoking `make`.
+The host based tests reside in the `tests/` directory. They can be built with `make` and run directly on a regular Linux system. The makefile links against the system `cjson` library, so you need the `libcjson-dev` development package installed before invoking `make`.
 
 For Debian based systems you can install the dependency with:
 

@@ -1,4 +1,4 @@
-name: lizardnova/utils
+name: espressif/utils
 version: "0.1.0"
 description: "Utility helpers"
 dependencies:

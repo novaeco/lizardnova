@@ -1,8 +1,8 @@
-name: lizardnova/animals
+name: espressif/animals
 version: "0.1.0"
 description: "Animal data management"
 dependencies:
   idf: ">=5.0"
-  lizardnova/storage: "*"
-  lizardnova/utils: "*"
+  espressif/storage: "*"
+  espressif/utils: "*"
   json: "*"

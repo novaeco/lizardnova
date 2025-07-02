@@ -1,8 +1,8 @@
-name: lizardnova/autoconfig
+name: espressif/autoconfig
 version: "0.1.0"
 description: "Autoconfig agent"
 dependencies:
   idf: ">=5.0"
-  lizardnova/utils: "*"
-  lizardnova/storage: "*"
+  espressif/utils: "*"
+  espressif/storage: "*"
   json: "*"

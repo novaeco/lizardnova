@@ -5,4 +5,4 @@ dependencies:
   idf: ">=5.0"
   espressif/utils: "*"
   espressif/storage: "*"
-  json: "*"
+  cjson: "*"

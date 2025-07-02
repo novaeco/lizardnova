@@ -5,3 +5,4 @@ dependencies:
   idf: ">=5.0"
   lizardnova/utils: "*"
   lizardnova/storage: "*"
+  json: "*"

@@ -4,3 +4,5 @@ description: "Animal data management"
 dependencies:
   idf: ">=5.0"
   lizardnova/storage: "*"
+  lizardnova/utils: "*"
+  json: "*"

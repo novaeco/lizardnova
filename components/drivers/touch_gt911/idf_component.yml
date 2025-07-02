@@ -5,3 +5,5 @@ dependencies:
   idf: ">=5.0"
   lizardnova/utils: "*"
   lizardnova/lvgl: "*"
+  driver: "*"
+  freertos: "*"

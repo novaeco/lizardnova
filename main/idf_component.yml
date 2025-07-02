@@ -14,6 +14,7 @@ dependencies:
     path: ../components/drivers/lcd_st7262
   touch_gt911:
     path: ../components/drivers/touch_gt911
+  freertos: "*"
   monitor:
     path: ../components/agents/monitor
   autoconfig:

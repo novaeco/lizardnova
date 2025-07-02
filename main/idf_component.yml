@@ -2,24 +2,24 @@ version: "0.1.0"
 description: "Main application"
 dependencies:
   idf: ">=5.0"
-  animals:
+  espressif/animals:
     path: ../components/core/animals
-  storage:
+  espressif/storage:
     path: ../components/storage
-  ui:
+  espressif/ui:
     path: ../components/core/ui
-  utils:
+  espressif/utils:
     path: ../components/core/utils
-  lcd_st7262:
+  espressif/lcd_st7262:
     path: ../components/drivers/lcd_st7262
-  touch_gt911:
+  espressif/touch_gt911:
     path: ../components/drivers/touch_gt911
   freertos: "*"
-  monitor:
+  espressif/monitor:
     path: ../components/agents/monitor
-  autoconfig:
+  espressif/autoconfig:
     path: ../components/agents/autoconfig
-  diagnostic:
+  espressif/diagnostic:
     path: ../components/agents/diagnostic
-  assistant:
+  espressif/assistant:
     path: ../components/agents/assistant

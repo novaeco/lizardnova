@@ -1,8 +1,7 @@
+name: lizardnova/lcd_st7262
 version: "0.1.0"
 description: "ST7262 LCD driver"
 dependencies:
   idf: ">=5.0"
-  lvgl:
-    path: ../../lvgl
-  utils:
-    path: ../../core/utils
+  lizardnova/lvgl: "*"
+  lizardnova/utils: "*"

@@ -1,8 +1,7 @@
+name: lizardnova/autoconfig
 version: "0.1.0"
 description: "Autoconfig agent"
 dependencies:
   idf: ">=5.0"
-  utils:
-    path: ../../core/utils
-  storage:
-    path: ../../storage
+  lizardnova/utils: "*"
+  lizardnova/storage: "*"

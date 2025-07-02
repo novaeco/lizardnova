@@ -1,8 +1,7 @@
+name: lizardnova/ui
 version: "0.1.0"
 description: "UI helpers for animals"
 dependencies:
   idf: ">=5.0"
-  animals:
-    path: ../animals
-  lvgl:
-    path: ../../lvgl
+  lizardnova/animals: "*"
+  lizardnova/lvgl: "*"

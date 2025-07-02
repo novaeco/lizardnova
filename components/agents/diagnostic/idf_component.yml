@@ -2,4 +2,5 @@ version: "0.1.0"
 description: "Diagnostics agent"
 dependencies:
   idf: ">=5.0"
-  utils: "*"
+  utils:
+    path: ../../core/utils

@@ -2,4 +2,5 @@ version: "0.1.0"
 description: "Animal data management"
 dependencies:
   idf: ">=5.0"
-  storage: "*"
+  storage:
+    path: ../../storage

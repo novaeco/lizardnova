@@ -2,13 +2,23 @@ version: "0.1.0"
 description: "Main application"
 dependencies:
   idf: ">=5.0"
-  animals: "*"
-  storage: "*"
-  ui: "*"
-  utils: "*"
-  lcd_st7262: "*"
-  touch_gt911: "*"
-  monitor: "*"
-  autoconfig: "*"
-  diagnostic: "*"
-  assistant: "*"
+  animals:
+    path: ../components/core/animals
+  storage:
+    path: ../components/storage
+  ui:
+    path: ../components/core/ui
+  utils:
+    path: ../components/core/utils
+  lcd_st7262:
+    path: ../components/drivers/lcd_st7262
+  touch_gt911:
+    path: ../components/drivers/touch_gt911
+  monitor:
+    path: ../components/agents/monitor
+  autoconfig:
+    path: ../components/agents/autoconfig
+  diagnostic:
+    path: ../components/agents/diagnostic
+  assistant:
+    path: ../components/agents/assistant

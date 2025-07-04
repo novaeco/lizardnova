@@ -1,2 +1,5 @@
-idf_component_register(SRCS "main.cpp"
+idf_component_register(SRCS "main.cpp" 
+                    "sensors.cpp" 
+                    "storage.cpp" 
+                    "ui.cpp"
                     INCLUDE_DIRS ".")

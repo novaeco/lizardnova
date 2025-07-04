@@ -25,3 +25,6 @@ Reptile Manager Pro is a basic example using the LVGL graphics library on the ES
 After flashing, the board will reboot and show the LVGL demo screen. Use `Ctrl+]` to exit the monitor.
 
 Board details and assembly instructions are located in [components/ESP32-S3-RGB-Panel/README.md](components/ESP32-S3-RGB-Panel/README.md) and [components/ESP32-S3-RGB-Panel/docs/Assemble-espP32-rgb-4inch.pdf](components/ESP32-S3-RGB-Panel/docs/Assemble-espP32-rgb-4inch.pdf). Additional information can be found in the hardware repository: [https://github.com/W00ng/ESP32-S3-RGB-Panel](https://github.com/W00ng/ESP32-S3-RGB-Panel).
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

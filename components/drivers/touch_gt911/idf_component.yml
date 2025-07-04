@@ -1,9 +1,0 @@
-name: espressif/touch_gt911
-version: "0.1.0"
-description: "GT911 touch driver"
-dependencies:
-  idf: ">=5.0"
-  espressif/utils: "*"
-  espressif/lvgl: "*"
-  driver: "*"
-  freertos: "*"

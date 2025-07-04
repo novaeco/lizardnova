@@ -1,8 +1,0 @@
-name: espressif/animals
-version: "0.1.0"
-description: "Animal data management"
-dependencies:
-  idf: ">=5.0"
-  espressif/storage: "*"
-  espressif/utils: "*"
-  cjson: "*"

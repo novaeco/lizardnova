@@ -1,6 +1,0 @@
-name: espressif/utils
-version: "0.1.0"
-description: "Utility helpers"
-dependencies:
-  idf: ">=5.0"
-  log: "*"

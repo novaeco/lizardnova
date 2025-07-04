@@ -1,7 +1,0 @@
-name: espressif/ui
-version: "0.1.0"
-description: "UI helpers for animals"
-dependencies:
-  idf: ">=5.0"
-  espressif/animals: "*"
-  espressif/lvgl: "*"

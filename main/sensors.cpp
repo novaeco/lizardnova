@@ -3,28 +3,25 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "esp_system.h"
+#include "bsp_i2c.h"
+#include "htu21.h"
 #include <stdio.h>
 
 static const char *TAG = "Sensors";
 
 sensor_data_t g_sensor_data = {0};
 
-static float read_temperature()
-{
-    return 20.0f + (float)(esp_random() % 1000) / 100.0f;
-}
-
-static float read_humidity()
-{
-    return 40.0f + (float)(esp_random() % 600) / 10.0f;
-}
-
 extern "C" void sensor_task(void *arg)
 {
     (void)arg;
+
+    // Initialize I2C bus and HTU21 sensor
+    bsp_i2c_init(I2C_NUM_0, 400000);
+    htu21_init();
+
     while (1) {
-        g_sensor_data.temperature = read_temperature();
-        g_sensor_data.humidity = read_humidity();
+        g_sensor_data.temperature = htu21_get_temp();
+        g_sensor_data.humidity = htu21_get_humid();
         ESP_LOGI(TAG, "Temp: %.2f C, Humidity: %.2f %%", g_sensor_data.temperature, g_sensor_data.humidity);
         FILE *f = fopen("/spiffs/sensor.log", "a");
         if (f) {

@@ -9,6 +9,17 @@ Reptile Manager Pro is a basic example using the LVGL graphics library on the ES
 - ES8311 audio codec (supported by the board)
 - External USB‑to‑UART adapter for flashing
 
+### Sensor Wiring
+Connect an HTU21 (or compatible) temperature and humidity sensor to the
+on‑board I2C bus:
+
+- SDA -> **GPIO40**
+- SCL -> **GPIO41**
+- VCC -> 3.3&nbsp;V
+- GND -> GND
+
+Other I2C sensors may be used if they share the same pins.
+
 ## Build and Flash Instructions
 1. Install **ESP-IDF 5.0** or newer. Follow the [ESP-IDF setup guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/).
 2. From the project directory, set the target and build the firmware:

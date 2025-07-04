@@ -1,0 +1,19 @@
+name: Build and Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: espressif/idf:release-v5.1
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Python dependencies
+        run: pip install pytest
+      - name: Build firmware
+        run: idf.py build
+      - name: Run unit tests
+        run: pytest -v

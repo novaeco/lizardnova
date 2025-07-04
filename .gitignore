@@ -1,0 +1,17 @@
+# Ignore build artifacts
+build/
+
+# SDK configuration files
+sdkconfig
+sdkconfig.old
+
+# Compiler outputs
+*.o
+*.d
+*.elf
+*.bin
+*.map
+
+# Editor temporary files
+*~
+.DS_Store

@@ -9,6 +9,11 @@
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 #include "lv_port_tick.h"
+#include "lv_port_fs.h"
+
+#include "sensors.h"
+#include "ui.h"
+#include "storage.h"
 
 static const char *TAG = "MainApp";
 
@@ -38,16 +43,22 @@ extern "C" void app_main(void)
     lv_init();
     lv_port_disp_init();
     lv_port_indev_init();
+    lv_port_fs_init();
     lv_port_tick_init();
 
     ESP_LOGI(TAG, "LVGL initialization complete.");
 
-    // Create a simple screen with a color
-    lv_obj_t *scr = lv_scr_act();
-    lv_obj_set_style_bg_color(scr, lv_color_hex(0x003a57), LV_PART_MAIN);
+    // Load saved configuration
+    load_config();
 
-    // Create a task to run the LVGL handler
+    // Initialize UI
+    ui_init();
+
+    // Create tasks
     xTaskCreate(lv_tick_task, "lv_tick_task", 4096 * 2, NULL, 1, NULL);
+    xTaskCreate(sensor_task, "sensor_task", 4096, NULL, 5, NULL);
+    xTaskCreate(ui_update_task, "ui_update_task", 4096, NULL, 4, NULL);
 
     ESP_LOGI(TAG, "Reptile-Manager-Pro started successfully.");
 }
+
